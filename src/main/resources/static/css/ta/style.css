@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+#wrap {
+  width: 1200px;
+  margin: auto;
+}
+
+header {
+  height: 120px;
+}
+nav {
+  height: 50px;
+}
+
+.contents {
+  height: 670px;
+}
+
+footer {
+  height: 80px;
+}
+
+.menu {
+  height: 40px;
+  width: 1000px;
+}
+
+.logo-text,
+.logo-text:hover {
+  color: blue;
+}
+
+.error-text {
+  font-size: 10px;
+  color: red;
+}
+
+.section-text {
+  color: gray;
+}
+
+.subject-text {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#idLengthText {
+  font-size: 12px;
+}
+
+.contents nav .nav-link:hover {
+  background-color: white;
+}

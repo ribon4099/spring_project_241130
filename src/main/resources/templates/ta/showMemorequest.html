@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>TOP 영수학원</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+	<!-- stylesheet -->
+	<link rel="stylesheet" type="text/css" th:href="@{/css/ta/style.css}">
+	    
+</head>
+<body>
+	<div id="wrap" class="container">
+      <header class="d-flex">
+        <!-- 상단 좌측 로고 영역 -->
+        <div class="col-2 d-flex align-items-center justify-content-center">
+          <h1>
+            <a href="/ta/main" class="text-danger logo-text">TOP</a>
+          </h1>
+        </div>
+
+        <!-- 상단 센터 이미지 영역 -->
+        <div class="col-8 d-flex align-items-center">
+          <img src="/img/harvard.jpg" alt="학원소개이미지" width="100" height="90" />
+          <img src="/img/MIT.jpg" alt="학원소개이미지" width="100" height="90" />
+          <img src="/img/NU2.jpg" alt="학원소개이미지" width="200" height="90" />
+          <img src="/img/KNU.jpg" alt="학원소개이미지" width="100" height="90" />
+          <img src="/img/KU.jpg" alt="학원소개이미지" width="100" height="90" />
+          <img src="/img/YNU.jpg" alt="학원소개이미지" width="100" height="90" />          
+        </div>
+
+        <!-- 상단 우측 광고 영역 -->
+	     <div class="col-2 mt-4">       
+	            <p>11월 수강 조기 마감!</p> 
+	            <p>12월 수강 신청 진행!</p>
+	     </div>
+
+      </header>
+      <nav class="bg-warning d-flex align-items-center">
+        <!-- 중간 메뉴 로고 영역 -->
+        <div class="col-2 d-flex align-items-center justify-content-center">
+          <a href="/top/show-curriculum-view" class="text-black">과정소개</a>
+        </div>
+        <!-- 중간 메뉴 -->
+        <ul class="nav col-8 d-flex align-items-center justify-content-between">
+          <li class="nav-item"><a href="/ta/show-introduction-view" class="nav-link">학원소개</a></li>
+          <li class="nav-item"><a href="/ta/show-lecturer-view" class="nav-link">강사소개</a></li>
+          <li class="nav-item"><a href="/ta/show-socialservice-view" class="nav-link">사회공원</a></li>
+          <li class="nav-item"><a href="/ta/show-recruit-view" class="nav-link">채용공고</a></li>
+          <li class="nav-item"><a href="/ta/show-franchise-view" class="nav-link">프랜차이즈</a></li>
+          <li class="nav-item"><a href="/ta/show-customerservice-view" class="nav-link">고객센터</a></li>
+        </ul>
+        <!-- 중간 광고 로고 영역 -->
+        <div class="col-2 d-flex align-items-center justify-content-center">
+          <span class="text-green">생활 광고</span>
+        </div>
+      </nav>
+      <section class="contents d-flex">
+        <!-- Section 좌측 수직 세로방향 메뉴 영역 -->
+        <nav class="col-2">
+          <!-- 수직(세로)방향 메뉴: nav + flex-column -->
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="/ta/show-basicEnglish-view" class="nav-link">기초영어</a>
+            </li>
+            <li class="nav-item">
+              <a href="/ta/show-middleEnglish1-view" class="nav-link">중등영어1</a>
+            </li>
+            <li class="nav-item">
+              <a href="/ta/show-middleEnglish2-view" class="nav-link">중등영어2</a>
+            </li>
+            <li class="nav-item">
+              <a href="/ta/show-highEnglish1-view" class="nav-link">고등영어1</a>
+            </li>
+            <li class="nav-item">
+              <a href="/ta/show-highEnglish2-view" class="nav-link">고등영어2</a>
+            </li>
+            <li class="nav-item">
+              <a href="/ta/show-basicMath-view" class="nav-link">기초수학</a>
+            </li>
+            <li class="nav-item">
+              <a href="/ta/show-middleMath1-view" class="nav-link">중등수학1</a>
+            </li>
+            <li class="nav-item">
+              <a href="/ta/show-middleMath2-view" class="nav-link">중등수학2</a>
+            </li>
+            <li class="nav-item">
+              <a href="/ta/show-middleMath3-view" class="nav-link">중등수학3</a>
+            </li>
+            <li class="nav-item">
+              <a href="/ta/show-prehighMath-view" class="nav-link">고등수학선행</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- 수직(세로)방향 Main contents -->
+        <section class="col-8 mt-2">
+          <div class="container">
+            <h1 class="text-center">강사님~ 궁금해요! 도와주세요!</h1> 
+            <hr>
+            	<form method="post" action="/ta/add-lecturer-request">
+					<div class="d-flex justify-content-between mt-5">
+						<div class="d-flex align-items-center">
+							<div class="input-label">닉네임</div>
+							<input type="text" class="form-control" id="nickname" name="nickname">
+							<div class="input-label">요청사항</div>
+							<input type="textarea" class="form-control" id="request" name="request">
+							<div class="input-label">연락처</div>
+							<input type="text" class="form-control" id="phoneNumber" name="phoneNumber">
+							<div class="input-label">이메일</div>
+							<input type="text" class="form-control" id="email" name="email">
+						</div>
+					</div>
+					<div class="text-right pt-4 pb-5">
+						<input type="submit" class="btn btn-success" value="저장">
+					</div>
+				</form>			
+			<!-- 	
+            <div>
+                <h4>강사님에게 한마디</h4>
+                <textarea rows="3" cols="90"></textarea>
+            </div> 
+             -->                              
+          </div>
+          <small>※공지. 요청하신 사항에 대한 답변은 Top Academy 검토 후 가능한 빠른 시일 내 답변드리겠습니다. </small>
+          <small>입력하신 데이터는 Top Academy 소유가 되며, 마케팅, 광고 및 상업적 목적으로 사용될 수 있습니다.</small>
+          <small>민감한 개인정보(성명/생년월일)입력은 추천하지 않습니다.</small>
+          <small>Top Academy는 입력하신 데이터에 대하여 해킹 등의 위험에 대하여 책임을 지지 않습니다.</small>
+          
+
+        </section>
+
+        <!--우측 광고 영역-->
+        <aside class="col-2">
+          <a
+            href="#"
+            class="nav-link d-flex justify-content-center align-items-center"
+            >맛나 분식</a
+          >
+          <a
+            href="#"
+            class="nav-link d-flex justify-content-center align-items-center"
+            >동네 서점</a
+          >
+          <a
+            href="https://naver.com"
+            class="nav-link d-flex justify-content-center align-items-center"
+            target="_blank"
+            >네이버</a
+          >
+          <a
+            href="https://google.com"
+            class="nav-link d-flex justify-content-center align-items-center"
+            target="_blank"
+            >구글</a
+          >
+          <a
+            href="https://daum.net"
+            class="nav-link d-flex justify-content-center align-items-center"
+            target="_blank"
+            >다음</a
+          >
+          <!--
+          <li>인스타: <a href="https://naver.com" target="_blank">링크</a></li>-->
+          <!--target="_blank":새창오픈-->
+          <!--<li>인스타: <a href="https://naver.com">링크</a></li>
+           -->
+        </aside>
+      </section>
+      <!-- 하단 영역 -->
+      <footer class="d-flex justify-content-center align-items-center">
+	        <small>주소: 서울특별시 구로구 가리본동 우마2길 37<br>
+	               연락처: 02-2620-7800<br>
+	               Copyright 2024. TOP Academy All Right Reserved.</small>
+      </footer>
+    </div>
+</body>
+</html>
